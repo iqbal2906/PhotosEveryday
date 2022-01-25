@@ -10,20 +10,21 @@ const isNotActiveStyle =
 const isActiveStyle =
   "flex items-center px-5 gap-3 font-extrabold border-r-2 border-black transition-all duration-200 ease-in-out capitalize";
 
-const categories = [
-  { name: "Animals" },
-  { name: "Wallpapers" },
-  { name: "Photography" },
-  { name: "Gaming" },
-  { name: "Coding" }
-];
-
-const Sidebar = ({ user, closeToggle }) => {
-  const handleCloseSidebar = () => {
-    if (closeToggle) closeToggle(false);
-  };
-
-  return (
+  
+  const categories = [
+    { name: "Animals" },
+    { name: "Wallpapers" },
+    { name: "Photography" },
+    { name: "Gaming" },
+    { name: "Coding" }
+  ];
+  
+  const Sidebar = ({ user, closeToggle }) => {
+    const handleCloseSidebar = () => {
+      if (closeToggle) closeToggle(false);
+    };
+    
+    return (
     <div className="flex flex-col justify-between bg-white h-full overflow-y-scroll min-w-210 hide-scrollbar">
       <div className="flex flex-col">
         <Link
@@ -68,7 +69,7 @@ const Sidebar = ({ user, closeToggle }) => {
             onClick={handleCloseSidebar}
           >
               <img src={user.image} alt="user-profile" className="w-10 h-10 rounded-full" />
-              <p>{user.username}</p>
+              <p>{user.userName}</p>
           </Link>
       )}
     </div>
