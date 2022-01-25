@@ -13,10 +13,11 @@ const isActiveStyle =
   
   const categories = [
     { name: "Animals" },
-    { name: "Wallpapers" },
+    { name: "Wallpaper" },
     { name: "Photography" },
     { name: "Gaming" },
-    { name: "Coding" }
+    { name: "Coding" },
+    { name: "Other" },
   ];
   
   const Sidebar = ({ user, closeToggle }) => {
