@@ -8,7 +8,7 @@ import { fetchUser } from "./utils/fetchUser";
 const App = () => {
   const navigate = useNavigate()
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const user = fetchUser()
 
     if(!user) navigate('/login')
